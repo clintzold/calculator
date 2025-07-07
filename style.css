@@ -2,35 +2,119 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 #calculator {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 575px;
     width: 400px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background-color: rgb(38, 38, 38);
+    border: 2px solid rgb(151, 151, 151);
+    border-radius: 15px;
+    gap: 10px;
 }
 
 #display {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: auto;
     display: flex;
     justify-content: flex-end;
-    background-color: gray;
+    align-items: center;
+    background-color: lightslategray;
     width: 370px;
-    height: 50px;
+    height: 75px;
     border-radius: 10px;
+    font-family: "Orbitron";
+    font-size: 33px;
 }
 
-#buttonbox {
+#buttonBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 520px;
-    width: 370px;
+    margin-top: 5px;
+    width: 400px;
+    padding: 5px;
+    gap: 10px;
+    /* border: 2px solid rgba(255, 255, 0, 0.548); */
+    border-radius: 15px;
 }
 
+#topButtonBar {
+    display: flex;
+    justify-content: center;
+   
+}
+
+#buttonBoxInner {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+
+#numberButtons {
+  
+    display: flex;
+    width: 300px;
+    margin-bottom: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+}
+
+#sideButtonBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75px;
+}
+
+.button.misc {
+    width: 75px;
+    height: 60px;
+    border-radius: 15px;
+    flex: 0 0 auto;
+}
+
+#clear {
+    margin-left: 12px;
+}
+
+.button.number {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    flex: 0 0 auto;
+}
+
+.button.operator {
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    flex: 0 0 auto;
+    font-size: 25px;
+}
+
+#equals {
+    width: 75px;
+    height: 100px;
+    border-radius: 15px;
+    flex: 0 0 auto;
+    background-color: rgba(255, 0, 0, 0.7);
+    font-size: 25px;
+}
+
+.button {
+    font-family: "Orbitron";
+}

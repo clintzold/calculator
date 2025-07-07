@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta chartset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Style+Script&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         <script src="index.js" defer></script>
     </head>
     <body>
         <div id="calculator">
-            <div id="display"></div>
+            <div id="display">0</div>
             <div id="buttonBox">
                 <div id="topButtonBar">
                     <button class="button misc" id="decimal">.</button>
@@ -28,13 +32,13 @@
                         <button class="button number" id="7">7</button>
                         <button class="button number" id="8">8</button>
                         <button class="button number" id="9">9</button>
-                        <div id="sideButtonBar">
-                            <button class="button operator" id="add">+</button>
-                            <button class="button operator" id="subtract">-</button>
-                            <button class="button operator" id="multiply">x</button>
-                            <button class="button operator" id="divide">÷</button>
-                            <button class="button operator" id="equals">=</button>
-                        </div>
+                    </div>
+                    <div id="sideButtonBar">
+                        <button class="button operator" id="add">+</button>
+                        <button class="button operator" id="subtract">-</button>
+                        <button class="button operator" id="multiply">x</button>
+                        <button class="button operator" id="divide">÷</button>
+                        <button class="button" id="equals">=</button>
                     </div>
                    
                 </div>

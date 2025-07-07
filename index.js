@@ -54,16 +54,35 @@ function roundNumber() {
     
 }
 
-function display() {
+function display(string) {
+    if (displayScreen.textContent === "0") {
+        displayScreen.textContent = null;
+        displayScreen.textContent += string;
+    } else if (displayScreen.textContent.length < 15) {
+        displayScreen.textContent += string;
+    } else {
+        alert("Cannot exceed 15 characters!");
+    }
     
 }
 
-function resetVariables() {
-
+function reset() {
+    num1 = null;
+    num2 = null;
+    operator = null;
+    displayScreen.textContent = "0";
 }
 
-function clearScreen() {
-
+function operateButtons(value) {
+    switch (value) {
+        case "clear":
+            reset();
+            break;
+        case "delete":
+            displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+            break;
+            
+    }
 }
 
 //GLOBAL VARIABLES
@@ -71,5 +90,23 @@ let num1;
 let num2;
 let operator;
 let result;
+let displayString;
+const displayScreen = document.getElementById("display");
+const numberButtons = document.querySelectorAll(".button.number");
+const topButtons = document.querySelectorAll(".button.misc");
 
-calculate ('+', 20, 40);
+//EVENT LISTENERS
+
+numberButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const clicked = button.textContent;
+        display(clicked);
+    })
+})
+
+topButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const clicked = button.id;
+        operateButtons(clicked);
+    })
+})
