@@ -73,13 +73,18 @@ function reset() {
     displayScreen.textContent = "0";
 }
 
+function remove() {
+    displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+    if (!displayScreen.textContent) displayScreen.textContent = "0";
+}
+
 function operateButtons(value) {
     switch (value) {
         case "clear":
             reset();
             break;
         case "delete":
-            displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+            remove();
             break;
             
     }
