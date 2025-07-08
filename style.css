@@ -13,7 +13,7 @@ body {
     height: 575px;
     width: 400px;
     padding: 15px;
-    background-color: rgb(38, 38, 38);
+    background-image: url("./img/background.png");
     border: 2px solid rgb(151, 151, 151);
     border-radius: 15px;
     gap: 10px;
@@ -84,6 +84,7 @@ body {
     height: 60px;
     border-radius: 15px;
     flex: 0 0 auto;
+    opacity: 0.7;
 }
 
 #clear {
@@ -96,6 +97,7 @@ body {
     height: 100px;
     border-radius: 25px;
     flex: 0 0 auto;
+    opacity: 0.7;
 }
 
 .button.operator {
@@ -104,6 +106,7 @@ body {
     border-radius: 15px;
     flex: 0 0 auto;
     font-size: 25px;
+    opacity: 0.7;
 }
 
 #equals {
