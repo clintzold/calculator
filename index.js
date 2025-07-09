@@ -44,6 +44,9 @@ function percent(number1, number2) {
 }
 
 function calculate() {
+
+    
+
     switch (operator) {
         case '+':
             add(num1, num2);
@@ -55,8 +58,13 @@ function calculate() {
             multiply(num1, num2);
             break;
         case '÷':
-            divide(num1, num2);
+            if (num2 === 0) {
+                alert("Cannot divide by ZERO!")
+                break;
+            } else {
+                divide(num1, num2);
             break;
+            };
         case '%':
             percent(num1, num2);
     }
@@ -180,7 +188,7 @@ function operateButtons(value) {
                 };
             assignValue();
             operator = "%";
-            displayScreen.textContent += "%";
+            displayScreen.textContent += " %";
             break;
         case "add":
             if (includesAny) { break;
